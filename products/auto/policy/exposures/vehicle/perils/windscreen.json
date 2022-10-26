@@ -1,0 +1,9 @@
+{
+  "name": "windscreen",
+  "displayName": "Windscreen",
+  "fields": [],
+  "indemnityPerItem": "100000",
+  "indemnityPerEvent": "100000",
+  "deductible": "0",
+  "lumpSumPayment": "0"
+}

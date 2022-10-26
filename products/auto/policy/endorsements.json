@@ -1,0 +1,10 @@
+{
+	"endorsements": [
+		{
+			"name": "generic",
+			"displayName": "Generic MTA",
+			"reprice": "always",
+			"documents": []
+		}
+	]
+}

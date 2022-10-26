@@ -1,0 +1,255 @@
+{
+  "operation": "new_business",
+  "policy": {
+    "characteristics": [
+      {
+        "createdTimestamp": "1666764204470",
+        "endTimestamp": "1698217200000",
+        "fieldGroupsByLocator": {},
+        "fieldValues": { "channel": ["Direct"] },
+        "locator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1",
+        "mediaByLocator": {},
+        "policyEndTimestamp": "1698217200000",
+        "policyLocator": "100000200",
+        "policyStartTimestamp": "1666681200000",
+        "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+        "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+        "startTimestamp": "1666681200000",
+        "taxGroups": [],
+        "updatedTimestamp": "1666764217775"
+      }
+    ],
+    "configVersion": "8",
+    "createdTimestamp": "1666764204470",
+    "currency": "USD",
+    "displayId": "100000200",
+    "documents": [],
+    "effectiveContractEndTimestamp": "1698217200000",
+    "exposures": [
+      {
+        "characteristics": [
+          {
+            "createdTimestamp": "1666764217775",
+            "endTimestamp": "1698217200000",
+            "exposureLocator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+            "fieldGroupsByLocator": {},
+            "fieldValues": { "make": ["Citroen"], "model": ["C4"], "vehicle_type": ["Car"], "vehicle_value": ["10000"] },
+            "locator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+            "mediaByLocator": {},
+            "policyLocator": "100000200",
+            "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+            "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+            "startTimestamp": "1666681200000",
+            "updatedTimestamp": "1666764233933"
+          }
+        ],
+        "createdTimestamp": "1666764217775",
+        "displayId": "100000308",
+        "locator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+        "name": "vehicle",
+        "perils": [
+          {
+            "characteristics": [
+              {
+                "coverageEndTimestamp": "1698217200000",
+                "coverageStartTimestamp": "1666681200000",
+                "createdTimestamp": "1666764217775",
+                "deductible": "1000.00",
+                "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+                "fieldGroupsByLocator": {},
+                "fieldValues": {},
+                "indemnityInAggregate": "100000.00",
+                "indemnityPerEvent": "100000.00",
+                "indemnityPerItem": "50000.00",
+                "locator": "83c9d8d6-c7b7-47b1-9b0e-088b6c76b598",
+                "lumpSumPayment": "0.00",
+                "mediaByLocator": {},
+                "perilLocator": "0ce56976-22d5-41d6-bc9a-f2eb293c7d5d",
+                "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1",
+                "policyLocator": "100000200",
+                "policyModificationLocator": "61a63899-5c8d-4d80-97ca-6d84f4dbf666",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+                "updatedTimestamp": "1666764217775"
+              }
+            ],
+            "createdTimestamp": "1666764217775",
+            "displayId": "100000310",
+            "exposureLocator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+            "locator": "0ce56976-22d5-41d6-bc9a-f2eb293c7d5d",
+            "name": "bodily_injury",
+            "policyLocator": "100000200",
+            "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+            "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+            "renewalGroup": "0ce56976-22d5-41d6-bc9a-f2eb293c7d5d",
+            "updatedTimestamp": "1666764217775"
+          },
+          {
+            "characteristics": [
+              {
+                "coverageEndTimestamp": "1698217200000",
+                "coverageStartTimestamp": "1666681200000",
+                "createdTimestamp": "1666764217775",
+                "deductible": "0.00",
+                "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+                "fieldGroupsByLocator": {},
+                "fieldValues": {},
+                "indemnityPerEvent": "100000.00",
+                "indemnityPerItem": "100000.00",
+                "locator": "12150c25-e147-4608-981e-177156842a72",
+                "lumpSumPayment": "0.00",
+                "mediaByLocator": {},
+                "perilLocator": "e8ef54d9-1cb8-408c-820a-3e753a5ced81",
+                "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1",
+                "policyLocator": "100000200",
+                "policyModificationLocator": "61a63899-5c8d-4d80-97ca-6d84f4dbf666",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+                "updatedTimestamp": "1666764217775"
+              }
+            ],
+            "createdTimestamp": "1666764217775",
+            "displayId": "100000312",
+            "exposureLocator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+            "locator": "e8ef54d9-1cb8-408c-820a-3e753a5ced81",
+            "name": "third_party_liability",
+            "policyLocator": "100000200",
+            "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+            "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+            "renewalGroup": "e8ef54d9-1cb8-408c-820a-3e753a5ced81",
+            "updatedTimestamp": "1666764217775"
+          },
+          {
+            "characteristics": [
+              {
+                "coverageEndTimestamp": "1698217200000",
+                "coverageStartTimestamp": "1666681200000",
+                "createdTimestamp": "1666764217775",
+                "deductible": "0.00",
+                "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+                "fieldGroupsByLocator": {},
+                "fieldValues": {},
+                "indemnityPerEvent": "100000.00",
+                "indemnityPerItem": "100000.00",
+                "locator": "bd0aa52c-8411-4eb8-b67d-45265dcbabd0",
+                "lumpSumPayment": "0.00",
+                "mediaByLocator": {},
+                "perilLocator": "83e26cde-111f-4bbe-847c-7b9691b2c114",
+                "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1",
+                "policyLocator": "100000200",
+                "policyModificationLocator": "61a63899-5c8d-4d80-97ca-6d84f4dbf666",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+                "updatedTimestamp": "1666764217775"
+              }
+            ],
+            "createdTimestamp": "1666764217775",
+            "displayId": "100000314",
+            "exposureLocator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+            "locator": "83e26cde-111f-4bbe-847c-7b9691b2c114",
+            "name": "windscreen",
+            "policyLocator": "100000200",
+            "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+            "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+            "renewalGroup": "83e26cde-111f-4bbe-847c-7b9691b2c114",
+            "updatedTimestamp": "1666764217775"
+          }
+        ],
+        "policyLocator": "100000200",
+        "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+        "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+        "updatedTimestamp": "1666764233933"
+      }
+    ],
+    "fees": [],
+    "grossFees": "0.00",
+    "invoices": [],
+    "locator": "100000200",
+    "modifications": [
+      {
+        "configVersion": "4",
+        "createdTimestamp": "1666764204470",
+        "displayId": "100000204",
+        "effectiveTimestamp": "1666681200000",
+        "exposureModifications": [
+          {
+            "exposureLocator": "812eb3c4-16c0-4298-97ea-3fcab626da61",
+            "locator": "c4b21ab1-6d20-4e39-999d-2a79c5f6ce8f",
+            "newExposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+            "perilModifications": [
+              {
+                "exposureModificationLocator": "c4b21ab1-6d20-4e39-999d-2a79c5f6ce8f",
+                "locator": "18473858-d9c5-49e6-9838-99fc5ac27fef",
+                "newPerilCharacteristicsLocator": "83c9d8d6-c7b7-47b1-9b0e-088b6c76b598",
+                "perilLocator": "0ce56976-22d5-41d6-bc9a-f2eb293c7d5d",
+                "policyLocator": "100000200",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514"
+              },
+              {
+                "exposureModificationLocator": "c4b21ab1-6d20-4e39-999d-2a79c5f6ce8f",
+                "locator": "1015d4aa-66b7-43ad-a2c7-638d9e593efb",
+                "newPerilCharacteristicsLocator": "12150c25-e147-4608-981e-177156842a72",
+                "perilLocator": "e8ef54d9-1cb8-408c-820a-3e753a5ced81",
+                "policyLocator": "100000200",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514"
+              },
+              {
+                "exposureModificationLocator": "c4b21ab1-6d20-4e39-999d-2a79c5f6ce8f",
+                "locator": "d69d4c8e-5def-417f-880e-550a39b985ef",
+                "newPerilCharacteristicsLocator": "bd0aa52c-8411-4eb8-b67d-45265dcbabd0",
+                "perilLocator": "83e26cde-111f-4bbe-847c-7b9691b2c114",
+                "policyLocator": "100000200",
+                "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+                "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514"
+              }
+            ],
+            "policyLocator": "100000200",
+            "policyModificationLocator": "61a63899-5c8d-4d80-97ca-6d84f4dbf666",
+            "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+            "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514"
+          }
+        ],
+        "fieldGroupsByLocator": {},
+        "fieldValues": {},
+        "locator": "61a63899-5c8d-4d80-97ca-6d84f4dbf666",
+        "mediaByLocator": {},
+        "name": "modification.policy.create",
+        "newPolicyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1",
+        "newPolicyCharacteristicsLocators": ["65bd43d9-c0f1-4413-af9e-158fb449c4f1"],
+        "number": "0",
+        "policyLocator": "100000200",
+        "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+        "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+        "updatedTimestamp": "1666764233933"
+      }
+    ],
+    "originalContractEndTimestamp": "1698217200000",
+    "originalContractStartTimestamp": "1666681200000",
+    "policyholderLocator": "b4cb0e03-9559-4af2-92f1-4922a88792f2",
+    "productLocator": "a904195a-da1c-49f2-afc1-1406ef73e514",
+    "productName": "auto",
+    "quoteSummary": { "notDiscarded": [{ "locator": "100000206", "name": "1", "state": "draft" }], "selected": "100000206" },
+    "updatedTimestamp": "1666764233933"
+  },
+  "policyExposurePerils": [
+    {
+      "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+      "perilCharacteristicsLocator": "83c9d8d6-c7b7-47b1-9b0e-088b6c76b598",
+      "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1"
+    },
+    {
+      "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+      "perilCharacteristicsLocator": "12150c25-e147-4608-981e-177156842a72",
+      "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1"
+    },
+    {
+      "exposureCharacteristicsLocator": "e9366092-7f66-44b7-a9f5-7f2f95a6b1b8",
+      "perilCharacteristicsLocator": "bd0aa52c-8411-4eb8-b67d-45265dcbabd0",
+      "policyCharacteristicsLocator": "65bd43d9-c0f1-4413-af9e-158fb449c4f1"
+    }
+  ],
+  "quoteLocator": "100000206",
+  "tenantTimeZone": "America/Los_Angeles"
+}

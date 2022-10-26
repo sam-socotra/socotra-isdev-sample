@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"test": "jest",
+		"test-api:login": "postman login --with-api-key <replace with Postman api key>",
+		"test-api:run": "postman collection run <replace with uuid from Postman> -e <replace with uuid from Postman>",
+		"test-api": "pnpm test-api:login && pnpm test-api:run"
+	},
+	"devDependencies": {
+		"fs": "0.0.1-security",
+		"jest": "^29.2.2"
+	}
+}

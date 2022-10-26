@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "e229225a-0459-4b72-9b88-1d6358b259f1",
+		"name": "ISDEV",
+		"description": "This guide describes how to interact with the Socotra API and demonstrates how it is used.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20025651"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"token\", jsonData.authorizationToken);",
+							"",
+							"pm.test('Authentication Test', function(){",
+							"    pm.response.to.have.status(200)",
+							"    pm.expect(pm.environment.get(\"token\")).to.not.empty",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hostName\": \"{{hostName}}\",\n\t\"username\": \"{{username}}\",\n\t\"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/account/authenticate",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"account",
+						"authenticate"
+					]
+				},
+				"description": "Authenticates user, set's global authorization token."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Policyholder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"policyHolderLocator\", jsonData.locator);",
+							"",
+							"pm.test('Create Policyholder Test', function(){",
+							"    pm.response.to.have.status(200)",
+							"    pm.expect(jsonData.entity.values.first_name[0]).to.equals(\"Sam\")",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"completed\": true,\n\t\"values\":{\n\t\t\"first_name\": \"Sam\",\n\t\t\"last_name\": \"Postman\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/policyholder/create",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"policyholder",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Policy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"policyLocator\", jsonData.locator);",
+							"pm.environment.set(\"exposureLocator1\", jsonData.exposures[0].locator);",
+							"",
+							"pm.test('Create Policy Test', function(){",
+							"    pm.response.to.have.status(200)",
+							"    pm.expect(jsonData.productName).to.equals(\"auto\")",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"policyholderLocator\": \"{{policyHolderLocator}}\",\n    \"productName\": \"auto\",\n    \"fieldValues\": {\n        \"channel\": \"Direct\"\n    },\n    \"exposures\": [\n        {\n            \"exposureName\": \"vehicle\",\n            \"fieldValues\": {\n                \"vehicle_type\": \"Car\",\n                \"make\": \"Citroen\",\n                \"model\": \"C4\",\n                \"vehicle_value\": 10000\n            },\n            \"perils\": [\n                {\"name\": \"third_party_liability\"}\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/policy",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"policy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issue Policy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"",
+							"pm.test('Create Policy Test', function(){",
+							"    pm.response.to.have.status(200)",
+							"    pm.expect(jsonData.productName).to.equals(\"auto\")",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/policy/{{policyLocator}}/issue",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"policy",
+						"{{policyLocator}}",
+						"issue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Endorsement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"endorsementLocator1\", jsonData.locator);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endorsementName\": \"generic\",\n    \"state\": \"accepted\",\n    \"updateExposures\": [\n        {\n            \"exposureLocator\": \"{{exposureLocator1}}\",\n            \"addPerils\": [\n                {\"name\": \"bodily_injury\"},\n                {\"name\": \"windscreen\"}\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/policies/{{policyLocator}}/endorsements",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"policies",
+						"{{policyLocator}}",
+						"endorsements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issue endorsement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"endorsementLocator1\", jsonData.locator);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"issue\",\n    \"conflictHandling\": \"invalidate\"\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/endorsements/{{endorsementLocator2}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"endorsements",
+						"{{endorsementLocator2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hostName",
+			"value": "vfateh-socotra-marine.co.sandbox.socotra.com",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "victor",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "socotra",
+			"type": "string"
+		}
+	]
+}
